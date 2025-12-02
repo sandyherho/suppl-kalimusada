@@ -231,12 +231,6 @@ def create_figure(all_data: dict, stats: dict):
             legend_handles = [line_a, line_b]
             legend_labels = ['Economy A', 'Economy B (Perturbed)']
         
-        # Mark initial points
-        ax.scatter([data['A_x'][0]], [data['A_y'][0]], [data['A_z'][0]],
-                   c=COLOR_A, s=30, marker='o', edgecolors='black', linewidths=0.5, zorder=10)
-        ax.scatter([data['B_x'][0]], [data['B_y'][0]], [data['B_z'][0]],
-                   c=COLOR_B, s=30, marker='s', edgecolors='black', linewidths=0.5, zorder=10)
-        
         # Set view angle
         ax.view_init(elev=view_angles[idx][0], azim=view_angles[idx][1])
         
